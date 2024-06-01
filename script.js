@@ -25,7 +25,6 @@ link3.addEventListener('click', () => {
     scrollToElement('.column');
 });
 
-        // Countdown Timer
         function updateCountdown() {
             const endDate = new Date("2024-06-24T00:00:00").getTime();
             const now = new Date().getTime();
