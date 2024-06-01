@@ -754,8 +754,9 @@ model-viewer {
     cursor: pointer;
 }
 
+/* Add this CSS to your existing stylesheet */
 .header-notification {
-    background-color: #c43e00;
+    background-color: #ad3c00;
     color: #000;
     padding: 10px;
     text-align: center;
@@ -768,15 +769,16 @@ model-viewer {
 
 .close-btn {
     position: absolute;
-    top: 50%;
+    top: 5px; /* Adjust as needed */
     right: 10px;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
     font-size: 20px;
     cursor: pointer;
     color: #000;
+    border: none;
+    background: none;
+    padding: 0;
 }
+
 
 
 @media screen and (max-width: 900px) {
