@@ -228,5 +228,9 @@ document.getElementById('close-notification').addEventListener('click', function
     countdownElement.style.display = 'none';
 });
 
+document.getElementById('nav-toggle').addEventListener('click', function() {
+    document.getElementById('nav-links').classList.toggle('open');
+});
+
 // Initial call to display the countdown immediately
 updateCountdown();

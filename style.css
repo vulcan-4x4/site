@@ -808,3 +808,484 @@ model-viewer {
         left: -100px;
     }
 }
+
+/* Existing CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1b1818;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+}
+
+.nav-logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    position: relative;
+    padding-bottom: 0.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #d83f1d;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 70%;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #d83f1d;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #8f0000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #d83f1d;
+    z-index: -100;
+}
+
+header {
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header .content h4 {
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .content p {
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+header .image {
+    position: relative;
+}
+
+header .image::before {
+    content: "o";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #d83f1d;
+    opacity: 0.2;
+    z-index: -100;
+}
+
+header .image img {
+    max-width: 600px;
+    margin: auto;
+}
+
+.features {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.features .card {
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.features .card:hover {
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.features .card span {
+    display: inline-block;
+    background-color: #d83f1d;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.features .card h4 {
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.features .card p {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.features .card a {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.features .card a:hover {
+    color: #d83f1d;
+}
+
+.sub-header {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+}
+
+.pricing {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.pricing .card {
+    padding: 3rem 2rem;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.pricing .card:hover {
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.pricing .card .content {
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.pricing .card h4 {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.pricing .card h3 {
+    color: #fff;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    border-bottom: 2px solid #323232;
+}
+
+.pricing .card ul {
+    margin-bottom: 2rem;
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer {
+    padding: 4rem 2rem;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.footer div {
+    color: #ccc;
+}
+
+.footer h3 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer ul a {
+    color: #ccc;
+    transition: all 0.3s ease;
+}
+
+.footer ul a:hover {
+    color: #fff;
+}
+
+.footer p {
+    color: #ccc;
+    line-height: 2;
+}
+
+.contact {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact header {
+    margin-bottom: 5rem;
+}
+
+.contact header h4 {
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact header h1 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 3rem;
+}
+
+.contact header h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+.contact .form-control {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: #ccc;
+}
+
+.contact .form-control input,
+.contact .form-control textarea {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.contact .form-control input:hover,
+.contact .form-control textarea:hover {
+    border-color: #d83f1d;
+}
+
+.contact .form-control textarea {
+    height: 200px;
+    resize: none;
+}
+
+.contact .form-control button {
+    padding: 1rem 3rem;
+    color: #fff;
+    background-color: #d83f1d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact .form-control button:hover {
+    background-color: #8f0000;
+}
+
+.message {
+    padding: 1rem 2rem;
+    color: #fff;
+    font-size: 1rem;
+    background-color: #00b894;
+    border-radius: 5px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message span {
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1b1818;
+        border-top: 1px solid #fff;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    header .image {
+        display: none;
+    }
+
+    .features, .pricing, .footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Media Queries for Smaller Devices */
+@media (max-width: 480px) {
+    header .content h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    header .content h4, header .content p {
+        font-size: 0.875rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.875rem;
+    }
+
+    .features .card h4, .pricing .card h4 {
+        font-size: 1rem;
+    }
+
+    .features .card span, .pricing .card h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Ensure buttons go to the bottom */
+    .features .card, .pricing .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
