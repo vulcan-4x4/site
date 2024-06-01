@@ -223,3 +223,11 @@ link3.addEventListener('click', () => {
             });
         }
         
+// Close notification functionality
+document.getElementById('close-notification').addEventListener('click', function() {
+    const countdownElement = document.getElementById('countdown');
+    countdownElement.style.display = 'none';
+});
+
+// Initial call to display the countdown immediately
+updateCountdown();

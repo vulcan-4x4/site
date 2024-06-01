@@ -754,6 +754,31 @@ model-viewer {
     cursor: pointer;
 }
 
+.header-notification {
+    background-color: #c43e00;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.header-notification span {
+    font-weight: bold;
+}
+
+.close-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+}
+
+
 @media screen and (max-width: 900px) {
     .team-member {
         max-width: 45%;
