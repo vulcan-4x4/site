@@ -243,3 +243,13 @@ updateCountdown();
         });
     });
 
+    const slider = document.getElementById("screenshotSlider");
+    const oldAppScreenshot = document.getElementById("oldAppScreenshot");
+    const vulcontrolScreenshot = document.getElementById("vulcontrolScreenshot");
+    
+    slider.addEventListener("input", () => {
+        const value = slider.value;
+        oldAppScreenshot.style.opacity = 1 - value / 100;
+        vulcontrolScreenshot.style.opacity = value / 100;
+    });
+    
