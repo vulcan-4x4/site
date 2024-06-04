@@ -891,6 +891,18 @@ model-viewer {
     bottom: -30px; /* Adjust the position of the slider */
 }
 
+.ig-button{
+    background: linear-gradient(45deg,  #f9ce34,  #ee2a7b, #6228d7);
+            background-size: 400% 400%;
+            animation: gradientMotion 10s ease infinite;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: flex;
+            padding: 20px;
+            text-align: center;
+            color: rgb(255, 255, 255); /* Ensure text is readable */
+}
+
 @media screen and (max-width: 900px) {
     .team-member {
         max-width: 45%;
