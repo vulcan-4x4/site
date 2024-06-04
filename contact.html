@@ -56,7 +56,42 @@
             </form>
         </section>
     </article>
+    <style>
+        .sponsors-container {
+           display: flex;
+           flex-wrap: wrap;
+           gap: 20px;
+           justify-content: center;
+           padding: 20px;
+       }
 
+       @keyframes gradientMotion {
+           0% {
+               background-position: 0% 50%;
+           }
+           50% {
+               background-position: 100% 50%;
+           }
+           100% {
+               background-position: 0% 50%;
+           }
+       }
+
+       .form-btn {
+           background: linear-gradient(45deg, #cb320f, #000000);
+           background-size: 400% 400%;
+           animation: gradientMotion 10s ease infinite;
+           border: 1px solid #ddd;
+           border-radius: 8px;
+           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+           width: flex;
+           padding: 20px;
+           text-align: center;
+           color: white; /* Ensure text is readable */
+       }
+
+   </style>
+</head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/ionicons.min.js"></script>
     <script>
         document.getElementById('message-form').addEventListener('submit', function(event) {

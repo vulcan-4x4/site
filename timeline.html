@@ -24,39 +24,62 @@
 
     <div class="container">
         <div class="timeline-container">
-            <div class="progress-bar" id="progress-bar"></div>
-            <div class="timeline">
-                <div class="timeline-item" data-date="2023-09-29">
-                    <h3>Team Vulcan Launched</h3>
-                </div>    
-                <div class="timeline-item" data-date="2023-10-03">
-                    <h3>Sponsorship Prospectus V1</h3>
-                </div>
-                <div class="timeline-item" data-date="2023-10-04">
-                    <h3>First Team Vulcan Meeting</h3>
-                </div>
-                <div class="timeline-item" data-date="2023-10-11">
-                    <h3>We start approaching companies</h3>
-                </div>
-                <div class="timeline-item" data-date="2023-10-20">
-                    <h3>Base Model of our 4x4 Car Finished</h3>
-                </div>
-                <div class="timeline-item" data-date="2023-11-15">
-                    <h3>First Sponsorship</h3>
-                </div>
-                <div class="timeline-item" data-date="2023-11-20">
-                    <h3>Car Model Done</h3>
-                </div>
-                <div class="timeline-item" data-date="2023-12-01">
-                    <h3>ECM is finalized and programmed</h3>
-                </div>
-                <div class="timeline-item" data-date="2024-06-24">
-                    <h3>Vulcan Appears for UAE National 4x4 Race</h3>      
-                </div>
+          <div class="progress-bar" id="progress-bar"></div>
+          <div class="timeline">
+            <div class="timeline-item" data-date="2023-09-29">
+              <span class="date-counter">Sep 29</span>
+              <h3>Team Vulcan Launched</h3>
             </div>
+            <div class="timeline-item" data-date="2023-10-03">
+              <span class="date-counter">Oct 3</span>
+              <h3>Sponsorship Prospectus V1</h3>
+            </div>
+            <div class="timeline-item" data-date="2023-10-04">
+              <span class="date-counter">Oct 4</span>
+              <h3>First Team Vulcan Meeting</h3>
+            </div>
+            <div class="timeline-item" data-date="2023-10-11">
+              <span class="date-counter">Oct 11</span>
+              <h3>We start approaching companies</h3>
+            </div>
+            <div class="timeline-item" data-date="2023-10-20">
+              <span class="date-counter">Oct 20</span>
+              <h3>Base Model of our 4x4 Car Finished</h3>
+            </div>
+            <div class="timeline-item" data-date="2023-11-15">
+              <span class="date-counter">Nov 15</span>
+              <h3>First Sponsorship</h3>
+            </div>
+            <div class="timeline-item" data-date="2023-11-20">
+              <span class="date-counter">Nov 20</span>
+              <h3>Car Model Done</h3>
+            </div>
+            <div class="timeline-item" data-date="2023-12-01">
+              <span class="date-counter">Dec 1</span>
+              <h3>ECM is finalized and programmed</h3>
+            </div>
+            <div class="timeline-item" data-date="2024-06-24">
+              <span class="date-counter">Jun 24</span>
+              <h3>Vulcan Appears for UAE National 4x4 Race</h3>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
+    <style>
+    .date-counter {
+    position: absolute;
+    top: -15px; /* Moved further up with -5px */
+    left: -1px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+    background: linear-gradient(45deg, #cb320f, #000000);
+        background-size: 400% 400%;
+        animation: gradientMotion 10s ease infinite;
+  }
+   </style>
     <!-- Modal -->
     <div id="modal" class="modal">
         <div class="modal-content">
