@@ -253,3 +253,101 @@ updateCountdown();
         vulcontrolScreenshot.style.opacity = value / 100;
     });
     
+    // Function to generate a random gradient color
+function getRandomGradient() {
+    // Generate random hue values for two colors
+    var hue1 = Math.floor(Math.random() * 360);
+    var hue2 = (hue1 + 180) % 360;
+
+    // Generate random saturation and lightness values
+    var saturation = Math.floor(Math.random() * 50) + 50;
+    var lightness = Math.floor(Math.random() * 30) + 50;
+
+    // Construct the gradient string
+    var gradient = "linear-gradient(to right, hsl(" + hue1 + ", " + saturation + "%, " + lightness + "%), hsl(" + hue2 + ", " + saturation + "%, " + lightness + "%))";
+
+    return gradient;
+}
+
+// Apply random gradient background to elements with orange color
+document.addEventListener("DOMContentLoaded", function() {
+    var orangeElements = document.querySelectorAll('*'); // Select all elements
+    orangeElements.forEach(function(element) {
+        var style = window.getComputedStyle(element); // Get computed styles
+        var color = style.getPropertyValue('color'); // Get the color property value
+        if (color === 'rgb(255, 165, 0)' || color === '#ffa500') { // Check if the color is orange
+            element.style.background = getRandomGradient(); // Apply random gradient background
+        }
+    });
+});
+
+
+// Function to generate a random gradient color
+function getRandomGradient(currentColor) {
+    // Convert the current color to HSL
+    var rgb = currentColor.match(/\d+/g);
+    var hsl = rgbToHsl(parseInt(rgb[0]), parseInt(rgb[1]), parseInt(rgb[2]));
+
+    // Generate a darker shade of the current color
+    var darkerHsl = [hsl[0], hsl[1], Math.max(hsl[2] - 0.2, 0)]; // Decrease lightness by 20%
+
+    // Generate random hue value for the second color
+    var hue2 = Math.floor(Math.random() * 360);
+
+    // Construct the gradient string
+    var gradient = "linear-gradient(to right, hsl(" + hsl[0] + ", " + hsl[1] + "%, " + hsl[2] + "%), hsl(" + hue2 + ", " + hsl[1] + "%, " + darkerHsl[2] + "%))";
+
+    return gradient;
+}
+
+// Function to convert RGB to HSL
+function rgbToHsl(r, g, b) {
+    r /= 255, g /= 255, b /= 255;
+    var max = Math.max(r, g, b), min = Math.min(r, g, b);
+    var h, s, l = (max + min) / 2;
+
+    if (max == min) {
+        h = s = 0; // achromatic
+    } else {
+        var d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch (max) {
+            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+            case g: h = (b - r) / d + 2; break;
+            case b: h = (r - g) / d + 4; break;
+        }
+        h /= 6;
+    }
+
+    return [h * 360, s * 100, l * 100];
+}
+
+// Apply random gradient background to elements with orange color
+document.addEventListener("DOMContentLoaded", function() {
+    var orangeElements = document.querySelectorAll('.contact .form-btn');
+    orangeElements.forEach(function(element) {
+        var style = window.getComputedStyle(element);
+        var color = style.getPropertyValue('background-color');
+        element.style.background = getRandomGradient(color);
+    });
+});
+
+
+function expandCard(card) {
+    // Toggle the expanded class on the clicked card
+    card.classList.toggle('expanded');
+
+    // Get all the sponsor cards
+    const cards = document.querySelectorAll('.sponsor-card');
+
+    // Get the number of expanded cards
+    const expandedCards = document.querySelectorAll('.sponsor-card.expanded').length;
+
+    // Calculate the width for each card
+    const cardWidth = (100 / cards.length) * (cards.length - expandedCards);
+
+    // Apply the width to each card
+    cards.forEach(card => {
+        card.style.width = `${cardWidth}%`;
+    });
+}

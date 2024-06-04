@@ -274,9 +274,10 @@ section .header {
 }
 
 .pricing .card button:hover {
-    background-color: #d83f1d;
+    background: linear-gradient(to right, orange, #d83f1d);
     border-color: #d83f1d;
 }
+
 
 footer {
     position: relative;
@@ -779,6 +780,49 @@ model-viewer {
     padding: 0;
 }
 
+.sponsors-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sponsor-card {
+    background: linear-gradient(45deg, #FF5733, #000000);
+    background-size: 400% 400%;
+    animation: gradientMotion 10s ease infinite;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); /* Default width for each card */
+    padding: 20px;
+    text-align: center;
+    color: white; /* Ensure text is readable */
+    transition: width 0.5s ease; /* Add transition for smooth animation */
+}
+
+.sponsor-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.sponsor-card h3 {
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.sponsor-card p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+.expanded {
+    width: calc(50% - 20px); /* Expanded width for each card */
+}
+
 
 @media (max-width: 900px) {
     .nav-links {
@@ -873,4 +917,10 @@ model-viewer {
     .timeline-item::before {
         left: -100px;
     }
+}
+
+@keyframes gradientMotion {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
