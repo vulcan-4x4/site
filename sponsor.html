@@ -7,10 +7,8 @@
     <title>Our Sponsors | Team Vulcan</title>
     <link rel="stylesheet" href="style.css">
     <style>
-         .sponsors-container {
+        .sponsors-container {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
             justify-content: center;
             padding: 20px;
         }
@@ -34,10 +32,16 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 100%; /* Set width to 100% to take full width */
+            max-width: flex; /* Optionally limit the max width */
             padding: 20px;
             text-align: center;
-            color: white; /* Ensure text is readable */
+            color: rgba(255, 255, 255, 0.9); /* Adjusted text color for readability */
+            transition: transform 0.3s ease;
+        }
+
+        .sponsor-card:hover {
+            transform: scale(1.05);
         }
 
         .sponsor-card img {
@@ -54,7 +58,7 @@
         .sponsor-card p {
             margin-top: 10px;
             font-size: 1em;
-            color: #555;
+            color: white; /* Changed color to white for readability */
         }
     </style>
 </head>
@@ -64,23 +68,25 @@
     <nav>
         <ul class="nav-links">
             <span class="blur"></span>
-          <span class="blur"></span>
+            <span class="blur"></span>
             <li class="link"><a href="index.html">Home</a></li>
             <li id="link2" class="link"><a href="about.html">Meet the Team!</a></li>
             <li id="link3" class="link"><a href="sponsor.html">Our Sponsors</a></li>
             <li id="link1" class="link"><a href="contact.html">Contact Us!</a></li>
             <li id="link3" class="link"><a href="timeline.html">Timeline</a></li>
         </ul>
-        <a href="https://www.instagram.com/teamvulcan.4x4" class="ig-button">Instagram ↗ </a>
+        <a href="https://www.instagram.com/teamvulcan.4x4" class="ig-button">Instagram ↗</a>
     </nav>
 
     <div class="container">
         <!-- Sponsors Section -->
-        <div class="sponsors-container" onclick="expandCard(this)">
+        <div class="sponsors-container">
             <div class="sponsor-card">
-                <img src="https://raw.githubusercontent.com/vulcan-4x4/site/main/images/sponsor1.png">
-                <h3>PCBWay</h3>
-                <p></p>
+                <img src="https://raw.githubusercontent.com/vulcan-4x4/site/main/images/sponsor.png">
+                <h3>ATP STEM</h3>
+                <p><br><br>
+                   
+                </p>
             </div>
         </div>
     </div>
