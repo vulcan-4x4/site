@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline | Team Vulcan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <ul class="nav-links">
+          <span class="blur"></span>
+          <span class="blur"></span>
+            <li class="link"><a href="index.html">Home</a></li>
+            <li id="link2" class="link"><a href="about.html">Meet the Team!</a></li>
+            <li id="link3" class="link"><a href="sponsor.html">Our Sponsors</a></li>
+            <li id="link1" class="link"><a href="contact.html">Contact Us!</a></li>
+            <li id="link3" class="link"><a href="timeline.html">Timeline</a></li>
+        </ul>
+        <a href="https://www.instagram.com/teamvulcan.4x4" class="ig-button">Instagram ↗ </a>
+
+    </nav>
+
+    <div class="container">
+        <div class="timeline-container">
+          <div class="progress-bar" id="progress-bar"></div>
+          <div class="timeline">
+            <div class="timeline-item" data-date="2023-09-29">
+              <span class="date-counter">Sep 29</span>
+              <h3>Team Vulcan Launches As Team Agni</h3>
+            </div>
+            <div class="timeline-item" data-date="2023-10-03">
+              <span class="date-counter">Oct 3</span>
+              <h3>Sponsorship Prospectus V1</h3>
+            </div>
+            <div class="timeline-item" data-date="2023-10-04">
+              <span class="date-counter">Oct 4</span>
+              <h3>First Team Meeting</h3>
+            </div>
+            <div class="timeline-item" data-date="2023-10-11">
+              <span class="date-counter">Oct 11</span>
+              <h3>Vulcan Approaches FIrst Companies</h3>
+            </div>
+            <div class="timeline-item" data-date="2023-10-20">
+              <span class="date-counter">Oct 20</span>
+              <h3>Base Model of our 4x4 Car Finished</h3>
+            </div>
+            <div class="timeline-item" data-date="2023-11-15">
+              <span class="date-counter">Jan 7</span>
+              <h3>Agni Rebrands to Vulcan</h3>
+            </div>
+            <div class="timeline-item" data-date="2023-11-20">
+              <span class="date-counter">Feb 25</span>
+              <h3>Rebranding To Vulcan Successful</h3>
+            </div>
+            <div class="timeline-item" data-date="2023-12-01">
+              <span class="date-counter">Mar 10</span>
+              <h3>Instagram Account Launched</h3>
+            </div>
+            <div class="timeline-item" data-date="2024-06-24">
+              <span class="date-counter">May 27</span>
+              <h3>Website goes live</h3>
+            </div>
+            <div class="timeline-item" data-date="2024-06-24">
+                <span class="date-counter">Jun 4</span>
+                <h3>First Sponsorship from PCBWay</h3>
+                </div>
+          </div>
+        </div>
+      </div>
+
+    <style>
+    .date-counter {
+    position: absolute;
+    top: -15px; /* Moved further up with -5px */
+    left: -1px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: white;
+    background: linear-gradient(45deg, #cb320f, #000000);
+        background-size: 400% 400%;
+        animation: gradientMotion 10s ease infinite;
+  }
+   </style>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-title"></div>
+            <div id="modal-date"></div>
+            <div id="modal-description"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+<div class="copyright">
+    Copyright © 2024 Team Vulcan. All Rights Reserved.
+</div>
+</html>
