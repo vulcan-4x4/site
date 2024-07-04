@@ -39,7 +39,7 @@ link3.addEventListener('click', () => {
 
             if (distance < 0) {
                 clearInterval(interval);
-                document.getElementById("countdown").innerHTML = "The event has ended.";
+                document.getElementById("countdown").innerHTML = "Vulcan is 2nd in the development category and 9th overall in the 2024 season";
             }
         }
 
